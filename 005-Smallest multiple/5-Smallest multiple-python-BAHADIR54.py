@@ -1,9 +1,10 @@
-def bolum(a):
-     for i in range(1,21):
-         if a %  i != 0:
-             return False
-     return True
-for  i in range(1,1000000000):
-    if bolum(i):
-        print(i)
-        exit()
+import math
+
+def LCM(a, b):
+    return (a*b) // math.gcd(a, b)
+
+result = 1
+for i in range(1,21):
+    result = LCM(result , i)
+
+print("Smallest number divisible by all numbers from 1 to 20:", result)
