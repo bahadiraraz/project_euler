@@ -1,4 +1,4 @@
 # project_euler
-projecteuler problem archives Solutions by using python
+projecteuler problem archives Solutions by me
 
 https://projecteuler.net/
