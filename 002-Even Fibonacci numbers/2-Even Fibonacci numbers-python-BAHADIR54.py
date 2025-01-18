@@ -1,20 +1,13 @@
-import sys
-sys.setrecursionlimit(1000)
-a = [0, 1]
-def fib(n):
+def sumOfEvenValuedFibonacciNumbers(n):
+    fibonacci = [1, 2]
+    
+    while fibonacci[-1] + fibonacci[-2] <= n:
+        fibonacci.append(fibonacci[-1] + fibonacci[-2])
 
-    if n <= 0:
-        pass
+    result = 0
+    for i in range(1, len(fibonacci), 3):
+        result += fibonacci[i]
+    
+    return result
 
-    elif n <= len(a):
-        return a[n - 1]
-    else:
-
-        b = fib(n - 1) + fib(n - 2)
-    if b < 4000000:
-        a.append(b)
-    return b
-
-fib(50)
-b = [b for b in a if b % 2 == 0]
-print(sum(b))
+print("sum of the even-valued fibonacci numbers are: ", sumOfEvenValuedFibonacciNumbers(4000000))
